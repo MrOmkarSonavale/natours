@@ -1,0 +1,50 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+    //  1rem-8px 9/16 = .5
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+    //  1rem-8px 8/16 = .5
+  }
+
+  @include respond(dekstop) {
+    font-size: 75%;
+    //  1rem-8px 12/16 = .5
+  }
+}
+
+body {
+  padding: 3rem;
+  overflow-x: hidden;
+  box-sizing: border-box;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
